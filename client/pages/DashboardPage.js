@@ -110,11 +110,11 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
   return Hover({
     children: (isHover) => Frame({
       height: 50,
-      fill: isHover ? [0, 0, 0, 0.08] : [0, 0, 0, 0],
+      backgroundColor: isHover ? `rgba(0, 0, 0, 0.08)` : `rgba(0, 0, 0, 0)`,
       flexDirection: `row`,
       onClick: eventHandler(() => { AppState.route = route }),
       children: [
-        Frame({ width: 5, fill: active ? [0, 123, 255, 1] : [0, 0, 0, 0] }),
+        Frame({ width: 5, backgroundColor: active ? `rgba(0, 123, 255, 1)` : `rgba(0, 0, 0, 0)` }),
         Frame({
           marginLeft: 13, marginTop: `auto`, marginBottom: `auto`,
           children: Icon(active ? [0, 123, 255, 1] : [189, 194, 209, 1])
