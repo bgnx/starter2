@@ -12,11 +12,11 @@ export const AuthPage = component(() => {
     AppState.route = `/dashboard`
   });
   return Frame({
-    grow: 1,
+    flexGrow: 1,
     paddingLeft: 10, paddingRight: 10, paddingTop: 10, paddingBottom: 10,
     row: true,
     children: Frame({
-      grow: 1, width: [325, 0], height: 321, marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
+      flexGrow: 1, width: [325, 0], height: 321, marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
       children: [
         Frame({
           row: true,
@@ -81,7 +81,7 @@ export const AuthPage = component(() => {
           row: true,
           children: [
             Frame({
-              grow: 1,
+              flexGrow: 1,
               children: [
                 Text({
                   marginBottom: 12,
@@ -111,7 +111,7 @@ export const AuthPage = component(() => {
               ]
             }),
             signup && Frame({
-              grow: 1, marginLeft: 4,
+              flexGrow: 1, marginLeft: 4,
               children: [
                 Text({
                   marginBottom: 12,
