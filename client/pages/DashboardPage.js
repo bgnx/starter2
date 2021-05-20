@@ -38,7 +38,7 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1]
                   }),
                   Text({
-                    backgroundColor: [0, 123, 255, 1], radius: 4,
+                    backgroundColor: [0, 123, 255, 1], borderRadius: 4,
                     stretch: false,
                     paddingLeft: 16, paddingRight: 16, paddingTop: 6, paddingBottom: 6,
                     value: `Вывод средств`,
@@ -137,13 +137,13 @@ const Card = () => {
     grow: 1, height: 148, width: [402, `max-content`],
     paddingLeft: 12, paddingRight: 12, paddingTop: 12, paddingBottom: 12,
     children: Frame({
-      backgroundColor: [255, 255, 255, 1], radius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
+      backgroundColor: [255, 255, 255, 1], borderRadius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
       paddingLeft: 24, paddingRight: 24, paddingTop: 24, paddingBottom: 24,
       row: true,
       children: [
         Frame({
           width: 88, height: 88, marginRight: 16,
-          shadow: [[3, 0, [32, 168, 216, 1], 0, 0, true]], radius: 44,
+          shadow: [[3, 0, [32, 168, 216, 1], 0, 0, true]], borderRadius: 44,
           children: [
             Text({
               marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
