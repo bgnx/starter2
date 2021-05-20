@@ -188,7 +188,7 @@ export const AuthPage = component(() => {
         }),
         Text({
           backgroundColor: [0, 123, 255, 1], borderRadius: 4,
-          stretch: false,
+          alignSelf: `flex-start`,
           paddingLeft: 32, paddingRight: 32, paddingTop: 6, paddingBottom: 6,
           value: signup ? `Register` : `Login`,
           size: 14,

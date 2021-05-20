@@ -39,7 +39,7 @@ export const DashboardPage = () => {
                   }),
                   Text({
                     backgroundColor: [0, 123, 255, 1], borderRadius: 4,
-                    stretch: false,
+                    alignSelf: `flex-start`,
                     paddingLeft: 16, paddingRight: 16, paddingTop: 6, paddingBottom: 6,
                     value: `Вывод средств`,
                     size: 14,

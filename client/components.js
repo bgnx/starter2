@@ -15,7 +15,7 @@ export const Frame = ({
   width = [null, 0],
   height = [null, 0],
   grow = 0,
-  stretch = true,
+  alignSelf = `stretch`,
   marginLeft = 0, marginTop = 0, marginRight = 0, marginBottom = 0,
   attrs,
 }) => {
@@ -37,7 +37,7 @@ export const Frame = ({
       flexFlow: `${row ? `row` : `column`} ${wrap ? `wrap` : `nowrap`}`,
 
       flex: `${grow} 0 ${grow > 0 ? `0` : `auto`}`,
-      alignSelf: stretch ? `stretch` : `flex-start`,
+      alignSelf,
       maxWidth: maxWidth === null ? `none` : (typeof maxWidth === `number` ? `${maxWidth}px` : maxWidth),
       maxHeight: maxHeight === null ? `none` : (typeof maxHeight === `number` ? `${maxHeight}px` : maxHeight),
       minWidth: (typeof minWidth === `number` ? `${minWidth}px` : minWidth),
