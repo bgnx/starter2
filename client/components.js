@@ -34,7 +34,7 @@ export const Text = ({
   fontSize = 16,
   lineHeight = fontSize * 1.2,
   fontWeight = 400,
-  color,
+  color = `rgba(0, 0, 0, 1)`,
   letterSpacing = 0,
   edit = false,
   onChange = null,
@@ -49,17 +49,20 @@ export const Text = ({
         wordBreak: `break-all`,
         whiteSpace: `pre-wrap`,
         fontFamily: font,
-        fontSize: `${fontSize}px`,
+        fontSize,
         lineHeight: `${lineHeight}px`,
-        fontWeight: `${fontWeight}`,
+        fontWeight,
         color,
-        letterSpacing: `${letterSpacing}px`,
-        ///
-        padding: `0px`,
-        border: `none`,
-        outline: `none`,
-        width: `100%`,
-        height: `100%`,
+        letterSpacing,
+
+        ...(edit ? {
+          padding: `0px`,
+          border: `none`,
+          outline: `none`,
+          width: `100%`,
+          height: `100%`,
+          background: `transparent`
+        } : {})
       },
       ...(edit ? {
         value,
