@@ -44,7 +44,7 @@ export const AuthPage = component(() => {
         }),
         Frame({
           height: 1, marginTop: 8, marginBottom: 16,
-          fill: [0, 0, 0, 0.12]
+          backgroundColor: [0, 0, 0, 0.12]
         }),
         Frame({
           marginBottom: 8,
@@ -187,7 +187,7 @@ export const AuthPage = component(() => {
           ]
         }),
         Text({
-          fill: [0, 123, 255, 1], radius: 4,
+          backgroundColor: [0, 123, 255, 1], radius: 4,
           stretch: false,
           paddingLeft: 32, paddingRight: 32, paddingTop: 6, paddingBottom: 6,
           value: signup ? `Register` : `Login`,

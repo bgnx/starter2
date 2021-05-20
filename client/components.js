@@ -3,7 +3,7 @@ import { component } from "./AppState.js";
 export const Frame = ({
   position = `relative`, zIndex,
   left = 0, top = 0, right = `auto`, bottom = `auto`,
-  fill = [0, 0, 0, 0],
+  backgroundColor = [0, 0, 0, 0],
   radius = 0,
   shadow = [],
   onClick = null,
@@ -27,7 +27,7 @@ export const Frame = ({
       cursor: onClick === null ? `inherit` : `pointer`,
       position,
       zIndex,
-      backgroundColor: `rgba(${fill[0]}, ${fill[1]}, ${fill[2]}, ${fill[3]})`,
+      backgroundColor: `rgba(${backgroundColor[0]}, ${backgroundColor[1]}, ${backgroundColor[2]}, ${backgroundColor[3]})`,
       borderRadius: Array.isArray(radius) ? `${radius[0]}px ${radius[1]}px ${radius[2]}px ${radius[3]}px` : `${radius}px`,
       boxShadow: shadow.map(([shadowSpread = 0, shadowBlur = 0, shadowColor = [0, 0, 0, 0], shadowX = 0, shadowY = 0, shadowInner = false]) => `rgba(${shadowColor[0]}, ${shadowColor[1]}, ${shadowColor[2]}, ${shadowColor[3]}) ${shadowX}px ${shadowY}px ${shadowBlur}px ${shadowSpread}px ${shadowInner ? `inset` : ``}`).join(`, `),
       paddingLeft, paddingRight, paddingTop, paddingBottom,
