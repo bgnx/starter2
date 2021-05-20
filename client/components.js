@@ -13,8 +13,8 @@ export const Frame = ({
 }) => {
   return React.createElement(`div`, {
     style: {
-      boxSizing: `border-box`,
       cursor: onClick === null ? cursor : `pointer`,
+      boxSizing: `border-box`,
       position,
       display: `flex`,
       flexDirection,
