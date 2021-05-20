@@ -3,7 +3,7 @@ import { component } from "./AppState.js";
 export const Frame = ({
   position = `relative`, zIndex,
   left = 0, top = 0, right = `auto`, bottom = `auto`,
-  backgroundColor = [0, 0, 0, 0],
+  backgroundColor,
   borderRadius = 0,
   boxShadow,
   onClick = null,
