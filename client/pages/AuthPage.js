@@ -14,12 +14,12 @@ export const AuthPage = component(() => {
   return Frame({
     flexGrow: 1,
     paddingLeft: 10, paddingRight: 10, paddingTop: 10, paddingBottom: 10,
-    row: true,
+    flexDirection: `row`,
     children: Frame({
       flexGrow: 1, width: [325, 0], height: 321, marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
       children: [
         Frame({
-          row: true,
+          flexDirection: `row`,
           children: [
             Text({
               marginTop: `auto`, marginBottom: `auto`,
@@ -78,7 +78,7 @@ export const AuthPage = component(() => {
         }),
         Frame({
           marginBottom: 8,
-          row: true,
+          flexDirection: `row`,
           children: [
             Frame({
               flexGrow: 1,
@@ -143,7 +143,7 @@ export const AuthPage = component(() => {
           ]
         }),
         signup ? Frame({
-          row: true,
+          flexDirection: `row`,
           marginBottom: 20,
           children: [
             Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: agreeWithTerms, onToggle: () => agreeWithTermsSet(!agreeWithTerms) }),
@@ -167,7 +167,7 @@ export const AuthPage = component(() => {
             }),
           ]
         }) : Frame({
-          row: true,
+          flexDirection: `row`,
           marginBottom: 20,
           children: [
             Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: rememberMe, onToggle: () => rememberMeSet(!rememberMe) }),

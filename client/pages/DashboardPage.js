@@ -5,7 +5,7 @@ export const DashboardPage = () => {
   return Frame({
     width: AppState.windowWidth, height: AppState.windowHeight,
     backgroundColor: [245, 246, 248, 1],
-    row: true,
+    flexDirection: `row`,
     children: [,
       Frame({
         width: 200,
@@ -63,7 +63,7 @@ export const DashboardPage = () => {
                   }),
                   Frame({
                     marginLeft: -12, marginRight: -12, marginTop: -12, marginBottom: -12,
-                    row: true,
+                    flexDirection: `row`,
                     wrap: true,
                     children: [
                       Card(),
@@ -111,7 +111,7 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
     children: (isHover) => Frame({
       height: 50,
       fill: isHover ? [0, 0, 0, 0.08] : [0, 0, 0, 0],
-      row: true,
+      flexDirection: `row`,
       onClick: eventHandler(() => { AppState.route = route }),
       children: [
         Frame({ width: 5, fill: active ? [0, 123, 255, 1] : [0, 0, 0, 0] }),
@@ -139,7 +139,7 @@ const Card = () => {
     children: Frame({
       backgroundColor: [255, 255, 255, 1], borderRadius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
       paddingLeft: 24, paddingRight: 24, paddingTop: 24, paddingBottom: 24,
-      row: true,
+      flexDirection: `row`,
       children: [
         Frame({
           width: 88, height: 88, marginRight: 16,

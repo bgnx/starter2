@@ -11,7 +11,7 @@ export const Frame = ({
   paddingLeft = 0, paddingRight = 0, paddingTop = 0, paddingBottom = 0,
   justifyContent = `flex-start`, alignItems = `flex-start`, alignContent = `stretch`,
   overflow = `visible`,
-  row = false, wrap = false,
+  flexDirection = `column`, wrap = false,
   width = [null, 0],
   height = [null, 0],
   flexGrow = 0,
@@ -34,7 +34,7 @@ export const Frame = ({
       justifyContent, alignItems, alignContent,
       overflow,
       display: `flex`,
-      flexFlow: `${row ? `row` : `column`} ${wrap ? `wrap` : `nowrap`}`,
+      flexFlow: `${flexDirection} ${wrap ? `wrap` : `nowrap`}`,
 
       flex: `${flexGrow} 0 ${flexGrow > 0 ? `0` : `auto`}`,
       alignSelf,
