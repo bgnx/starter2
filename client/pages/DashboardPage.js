@@ -4,7 +4,7 @@ import { AppState, eventHandler } from "../AppState.js";
 export const DashboardPage = () => {
   return Frame({
     width: AppState.windowWidth, height: AppState.windowHeight,
-    backgroundColor: [245, 246, 248, 1],
+    backgroundColor: `rgba(245, 246, 248, 1)`,
     flexDirection: `row`,
     children: [,
       Frame({
@@ -38,7 +38,7 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1]
                   }),
                   Text({
-                    backgroundColor: [0, 123, 255, 1], borderRadius: 4,
+                    backgroundColor: `rgba(0, 123, 255, 1)`, borderRadius: 4,
                     alignSelf: `flex-start`,
                     paddingLeft: 16, paddingRight: 16, paddingTop: 6, paddingBottom: 6,
                     value: `Вывод средств`,
@@ -78,17 +78,17 @@ export const DashboardPage = () => {
           Frame({
             position: `absolute`,
             height: 56, left: 0, right: 0,
-            backgroundColor: [255, 255, 255, 1],
+            backgroundColor: `rgba(255, 255, 255, 1)`,
           }),
         ]
       }),
       Frame({
         position: `absolute`,
         width: 200, top: 0, bottom: 0,
-        backgroundColor: [255, 255, 255, 1], shadow: [[0, 2, [225, 229, 235, 0.8], 0, 1], [0, 27, [90, 97, 105, 0.15], 0, 13]],
+        backgroundColor: `rgba(255, 255, 255, 1)`, shadow: [[0, 2, [225, 229, 235, 0.8], 0, 1], [0, 27, [90, 97, 105, 0.15], 0, 13]],
         children: [
           Frame({ height: 56 }),
-          Frame({ height: 1, backgroundColor: [0, 0, 0, 0.12] }),
+          Frame({ height: 1, backgroundColor: `rgba(0, 0, 0, 0.12)` }),
           MenuItem({ route: `/dashboard`, label: `Главная страница`, Icon: fill => Vector({ fill, width: 20, d: `M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z` }) }),
           MenuItem({ route: `/dashboard/exchange`, label: `Биржа товаров`, Icon: fill => Vector({ fill, width: 20, width: 20, d: `M5.2496 8.0688l2.83-2.8268 14.134 14.15-2.83 2.8268zM9.4857 3.8272l2.828-2.8288 5.6576 5.656-2.828 2.8288zM.9989 12.3147l2.8284-2.8284L9.484 15.143l-2.8284 2.8284zM1 21h12v2H1z` }) }),
           MenuItem({ route: `/dashboard/inventory`, label: `Инвентарь`, Icon: fill => Vector({ fill, width: 20, width: 20, d: `M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5v-3h3.56c.69 1.19 1.97 2 3.45 2s2.75-.81 3.45-2H19v3zm0-5h-4.99c0 1.1-.9 2-2 2s-2-.9-2-2H5V5h14v9z` }) }),
@@ -137,7 +137,7 @@ const Card = () => {
     flexGrow: 1, height: 148, maxWidth: 402, minWidth: `max-content`,
     paddingLeft: 12, paddingRight: 12, paddingTop: 12, paddingBottom: 12,
     children: Frame({
-      backgroundColor: [255, 255, 255, 1], borderRadius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
+      backgroundColor: `rgba(255, 255, 255, 1)`, borderRadius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
       paddingLeft: 24, paddingRight: 24, paddingTop: 24, paddingBottom: 24,
       flexDirection: `row`,
       children: [
