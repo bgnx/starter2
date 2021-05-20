@@ -1,19 +1,20 @@
 import { component } from "./AppState.js";
 
 export const Frame = ({
-  position = `relative`,
-  onClick = null,
   children,
+  attrs = {},
+  onClick = null,
 
+  cursor = `inherit`,
+  position = `relative`,
   flexDirection = `column`,
   flexGrow = 0,
-  attrs,
   ...styles
 }) => {
   return React.createElement(`div`, {
     style: {
       boxSizing: `border-box`,
-      cursor: onClick === null ? `inherit` : `pointer`,
+      cursor: onClick === null ? cursor : `pointer`,
       position,
       display: `flex`,
       flexDirection,
