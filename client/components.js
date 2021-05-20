@@ -1,52 +1,26 @@
 import { component } from "./AppState.js";
 
 export const Frame = ({
-  position = `relative`, zIndex,
-  left = 0, top = 0, right = `auto`, bottom = `auto`,
-  backgroundColor,
-  borderRadius = 0,
-  boxShadow,
+  position = `relative`,
   onClick = null,
   children,
-  paddingLeft = 0, paddingRight = 0, paddingTop = 0, paddingBottom = 0,
-  justifyContent = `flex-start`, alignItems = `flex-start`, alignContent = `stretch`,
-  overflow = `visible`,
-  flexDirection = `column`, flexWrap = `nowrap`,
-  width = `auto`, minWidth = 0, maxWidth = `none`,
-  height = `auto`, minHeight = 0, maxHeight = `none`,
+
+  flexDirection = `column`,
   flexGrow = 0,
-  alignSelf = `stretch`,
-  marginLeft = 0, marginTop = 0, marginRight = 0, marginBottom = 0,
   attrs,
+  ...styles
 }) => {
   return React.createElement(`div`, {
     style: {
       boxSizing: `border-box`,
       cursor: onClick === null ? `inherit` : `pointer`,
       position,
-      zIndex,
-      backgroundColor,
-      borderRadius,
-      boxShadow,
-      paddingLeft, paddingRight, paddingTop, paddingBottom,
-      justifyContent, alignItems, alignContent,
-      overflow,
       display: `flex`,
-      flexDirection, flexWrap,
+      flexDirection,
       flexGrow,
       flexShrink: 0,
       flexBasis: flexGrow > 0 ? `0` : `auto`,
-
-      alignSelf,
-      width,
-      height,
-      maxWidth,
-      maxHeight,
-      minWidth,
-      minHeight,
-
-      marginLeft, marginTop, marginRight, marginBottom,
-      left, top, right, bottom,
+      ...styles
     },
     onClick,
     ...attrs,
