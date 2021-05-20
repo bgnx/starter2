@@ -64,7 +64,7 @@ export const DashboardPage = () => {
                   Frame({
                     marginLeft: -12, marginRight: -12, marginTop: -12, marginBottom: -12,
                     flexDirection: `row`,
-                    wrap: true,
+                    flexWrap: `wrap`,
                     children: [
                       Card(),
                       Card(),
