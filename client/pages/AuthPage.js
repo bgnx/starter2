@@ -143,7 +143,7 @@ export const AuthPage = component(() => {
           flexDirection: `row`,
           marginBottom: 20,
           children: [
-            Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: agreeWithTerms, onToggle: () => agreeWithTermsSet(!agreeWithTerms) }),
+            Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: agreeWithTerms, onChange: () => agreeWithTermsSet(!agreeWithTerms) }),
             Text({
               marginRight: 10, marginTop: `auto`, marginBottom: `auto`,
               fontSize: 16,
@@ -167,7 +167,7 @@ export const AuthPage = component(() => {
           flexDirection: `row`,
           marginBottom: 20,
           children: [
-            Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: rememberMe, onToggle: () => rememberMeSet(!rememberMe) }),
+            Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: rememberMe, onChange: () => rememberMeSet(!rememberMe) }),
             Text({
               marginRight: 10, marginTop: `auto`, marginBottom: `auto`,
               fontSize: 16,

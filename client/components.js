@@ -97,6 +97,21 @@ export const Input = ({
   })
 };
 
+export const Checkbox = ({ size = 18, checked, onChange, ...props }) => {
+  return Frame({
+    ...props,
+    children: React.createElement(`input`, {
+      style: {
+        width: size,
+        height: size,
+      },
+      type: `checkbox`,
+      checked,
+      onChange,
+    })
+  })
+};
+
 export const Vector = component(({ d, width = null, fill = [0, 0, 0, 1], stroke = [0, 0, 0, 1], strokeWidth = 0, strokeLinejoin = `miter`, strokeLinecap = `butt` }) => {
   const ref = React.useRef();
   const [size, sizeSet] = React.useState({ width: 1, height: 1, x: 0, y: 0, })
@@ -154,20 +169,3 @@ export const Focus = component(({ children }) => {
     children: children(focus)
   });
 });
-
-export const Checkbox = ({ size = 18, checked, onToggle, ...props }) => {
-  return Frame({
-    ...props,
-    children: Frame({
-      width: size, height: size,
-      boxShadow: `inset 0px 0px 0px 2px rgba(0, 123, 255, 1)`, borderRadius: 2,
-      onClick: onToggle,
-      children: [
-        checked && Vector({
-          fill: [0, 123, 255, 1],
-          d: `M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z`
-        })
-      ]
-    })
-  })
-};
