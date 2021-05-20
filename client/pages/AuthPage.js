@@ -81,7 +81,7 @@ export const AuthPage = component(() => {
           row: true,
           children: [
             Frame({
-              grow: 1, marginLeft: 4,
+              grow: 1,
               children: [
                 Text({
                   marginBottom: 12,
