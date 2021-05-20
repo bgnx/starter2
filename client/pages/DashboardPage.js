@@ -24,28 +24,28 @@ export const DashboardPage = () => {
                   Text({
                     marginBottom: 32,
                     value: `Мой счёт`,
-                    size: 20,
+                    fontSize: 20,
                     lineHeight: 23,
-                    weight: 500,
-                    color: [61, 81, 112, 1]
+                    fontWeight: 500,
+                    color: `rgba(61, 81, 112, 1)`
                   }),
                   Text({
                     marginBottom: 24,
                     value: `$4 352`,
-                    size: 72,
+                    fontSize: 72,
                     lineHeight: 84,
-                    weight: 400,
-                    color: [61, 81, 112, 1]
+                    fontWeight: 400,
+                    color: `rgba(61, 81, 112, 1)`
                   }),
                   Text({
                     backgroundColor: `rgba(0, 123, 255, 1)`, borderRadius: 4,
                     alignSelf: `flex-start`,
                     paddingLeft: 16, paddingRight: 16, paddingTop: 6, paddingBottom: 6,
                     value: `Вывод средств`,
-                    size: 14,
+                    fontSize: 14,
                     lineHeight: 24.5,
-                    weight: 500,
-                    color: [255, 255, 255, 1],
+                    fontWeight: 500,
+                    color: `rgba(255, 255, 255, 1)`,
                     letterSpacing: 0.4
                   }),
                 ]
@@ -56,10 +56,10 @@ export const DashboardPage = () => {
                   Text({
                     marginBottom: 32,
                     value: `Инвентарь`,
-                    size: 20,
+                    fontSize: 20,
                     lineHeight: 23,
-                    weight: 500,
-                    color: [61, 81, 112, 1],
+                    fontWeight: 500,
+                    color: `rgba(61, 81, 112, 1)`,
                   }),
                   Frame({
                     marginLeft: -12, marginRight: -12, marginTop: -12, marginBottom: -12,
@@ -122,10 +122,10 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
         Text({
           marginLeft: 18, marginTop: `auto`, marginBottom: `auto`,
           value: label,
-          size: 13,
+          fontSize: 13,
           lineHeight: 15,
-          weight: 500,
-          color: [61, 81, 112, 1]
+          fontWeight: 500,
+          color: `rgba(61, 81, 112, 1)`
         })
       ]
     })
@@ -148,20 +148,20 @@ const Card = () => {
             Text({
               marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
               value: `7`,
-              size: 40,
+              fontSize: 40,
               lineHeight: 47,
-              weight: 700,
-              color: [61, 81, 112, 1]
+              fontWeight: 700,
+              color: `rgba(61, 81, 112, 1)`
             }),
           ]
         }),
         Text({
           marginTop: `auto`, marginBottom: `auto`,
           value: `Товаров в инвентаре`,
-          size: 16,
+          fontSize: 16,
           lineHeight: 19,
-          weight: 500,
-          color: [61, 81, 112, 1]
+          fontWeight: 500,
+          color: `rgba(61, 81, 112, 1)`
         })
       ]
     })
