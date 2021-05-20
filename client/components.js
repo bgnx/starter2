@@ -36,14 +36,42 @@ export const Text = ({
   fontWeight = 400,
   color = `rgba(0, 0, 0, 1)`,
   letterSpacing = 0,
-  edit = false,
+  ...props
+}) => {
+  return Frame({
+    ...props,
+    children: React.createElement(`div`, {
+      style: {
+        overflowWrap: `break-word`,
+        wordBreak: `break-all`,
+        whiteSpace: `pre-wrap`,
+        fontFamily: font,
+        fontSize,
+        lineHeight: `${lineHeight}px`,
+        fontWeight,
+        color,
+        letterSpacing,
+      },
+    }, value)
+  })
+};
+
+export const Input = ({
+  value = ``,
+  font = `"Roboto", "Helvetica", "Arial", sans-serif`,
+  fontSize = 16,
+  lineHeight = fontSize * 1.2,
+  fontWeight = 400,
+  color = `rgba(0, 0, 0, 1)`,
+  letterSpacing = 0,
+
   onChange = null,
   type = `text`,
   ...props
 }) => {
   return Frame({
     ...props,
-    children: React.createElement(edit ? `input` : `div`, {
+    children: React.createElement(`input`, {
       style: {
         overflowWrap: `break-word`,
         wordBreak: `break-all`,
@@ -55,21 +83,17 @@ export const Text = ({
         color,
         letterSpacing,
 
-        ...(edit ? {
-          padding: `0px`,
-          border: `none`,
-          outline: `none`,
-          width: `100%`,
-          height: `100%`,
-          background: `transparent`
-        } : {})
+        padding: `0px`,
+        border: `none`,
+        outline: `none`,
+        width: `100%`,
+        height: `100%`,
+        background: `transparent`
       },
-      ...(edit ? {
-        value,
-        onChange,
-        type,
-      } : {})
-    }, edit ? null : value)
+      value,
+      onChange,
+      type,
+    })
   })
 };
 

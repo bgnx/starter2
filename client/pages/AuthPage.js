@@ -1,4 +1,4 @@
-import { Frame, Text, Focus, Checkbox } from "../components.js";
+import { Frame, Text, Input, Focus, Checkbox } from "../components.js";
 import { component, eventHandler, AppState } from "../AppState.js";
 
 export const AuthPage = component(() => {
@@ -59,7 +59,7 @@ export const AuthPage = component(() => {
               value: `Your Email`,
             }),
             Focus({
-              children: isFocus => Text({
+              children: isFocus => Input({
                 marginBottom: 12,
                 boxShadow: `0px 0px 0px 1px ${isFocus ? `rgba(0, 123, 255, 1)` : `rgba(217, 222, 229, 1)`}`, borderRadius: 4,
                 paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
@@ -68,7 +68,6 @@ export const AuthPage = component(() => {
                 fontWeight: 400,
                 letterSpacing: 0.15,
                 color: `rgba(61, 81, 112, 1)`,
-                edit: true,
                 value: email,
                 type: `email`,
                 onChange: (e) => emailSet(e.target.value)
@@ -93,7 +92,7 @@ export const AuthPage = component(() => {
                   value: `Your Password`,
                 }),
                 Focus({
-                  children: isFocus => Text({
+                  children: isFocus => Input({
                     marginBottom: 12,
                     boxShadow: `0px 0px 0px 1px ${isFocus ? `rgba(0, 123, 255, 1)` : `rgba(217, 222, 229, 1)`}`, borderRadius: 4,
                     paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
@@ -102,7 +101,6 @@ export const AuthPage = component(() => {
                     fontWeight: 400,
                     letterSpacing: 0.15,
                     color: `rgba(61, 81, 112, 1)`,
-                    edit: true,
                     value: password,
                     type: `password`,
                     onChange: (e) => passwordSet(e.target.value)
@@ -123,7 +121,7 @@ export const AuthPage = component(() => {
                   value: `Re-type Password`,
                 }),
                 Focus({
-                  children: isFocus => Text({
+                  children: isFocus => Input({
                     marginBottom: 12,
                     boxShadow: `0px 0px 0px 1px ${isFocus ? `rgba(0, 123, 255, 1)` : `rgba(217, 222, 229, 1)`}`, borderRadius: 4,
                     paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
@@ -132,7 +130,6 @@ export const AuthPage = component(() => {
                     fontWeight: 400,
                     letterSpacing: 0.15,
                     color: `rgba(61, 81, 112, 1)`,
-                    edit: true,
                     value: password,
                     type: `password`,
                     onChange: (e) => passwordSet(e.target.value)
