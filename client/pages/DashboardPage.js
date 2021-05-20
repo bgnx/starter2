@@ -3,26 +3,26 @@ import { AppState, eventHandler } from "../AppState.js";
 
 export const DashboardPage = () => {
   return Frame({
-    rect: { width: AppState.windowWidth, height: AppState.windowHeight },
-    visual: { fill: [245, 246, 248, 1] },
+    width: AppState.windowWidth, height: AppState.windowHeight,
+    fill: [245, 246, 248, 1],
     row: true,
     children: [,
       Frame({
-        rect: { width: 200 },
+        width: 200,
       }),
       Frame({
-        rect: { grow: 1 },
+        grow: 1,
         children: [
           Frame({
-            rect: { grow: 1 },
+            grow: 1,
             padding: [88, 32],
             overflow: `scroll`,
             children: [
               Frame({
-                rect: { y: [0, 40] },
+                y: [0, 40],
                 children: [
                   Text({
-                    rect: { y: [0, 32] },
+                    y: [0, 32],
                     value: `Мой счёт`,
                     size: 20,
                     lineHeight: 23,
@@ -30,7 +30,7 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1]
                   }),
                   Text({
-                    rect: { y: [0, 24] },
+                    y: [0, 24],
                     value: `$4 352`,
                     size: 72,
                     lineHeight: 84,
@@ -38,8 +38,8 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1]
                   }),
                   Text({
-                    visual: { fill: [0, 123, 255, 1], radius: 4 },
-                    rect: { stretch: false },
+                    fill: [0, 123, 255, 1], radius: 4,
+                    stretch: false,
                     padding: [6, 16],
                     value: `Вывод средств`,
                     size: 14,
@@ -51,10 +51,10 @@ export const DashboardPage = () => {
                 ]
               }),
               Frame({
-                rect: { y: [0, 40] },
+                y: [0, 40],
                 children: [
                   Text({
-                    rect: { y: [0, 32] },
+                    y: [0, 32],
                     value: `Инвентарь`,
                     size: 20,
                     lineHeight: 23,
@@ -62,7 +62,7 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1],
                   }),
                   Frame({
-                    rect: { x: [-12, -12], y: [-12, -12] },
+                    x: [-12, -12], y: [-12, -12],
                     row: true,
                     wrap: true,
                     children: [
@@ -77,18 +77,18 @@ export const DashboardPage = () => {
           }),
           Frame({
             float: true,
-            rect: { height: 56, x: [0, 0] },
-            visual: { fill: [255, 255, 255, 1] },
+            height: 56, x: [0, 0],
+            fill: [255, 255, 255, 1],
           }),
         ]
       }),
       Frame({
         float: true,
-        rect: { width: 200, y: [0, 0] },
-        visual: { fill: [255, 255, 255, 1], shadow: [[0, 2, [225, 229, 235, 0.8], 0, 1], [0, 27, [90, 97, 105, 0.15], 0, 13]] },
+        width: 200, y: [0, 0],
+        fill: [255, 255, 255, 1], shadow: [[0, 2, [225, 229, 235, 0.8], 0, 1], [0, 27, [90, 97, 105, 0.15], 0, 13]],
         children: [
-          Frame({ rect: { height: 56 } }),
-          Frame({ rect: { height: 1 }, visual: { fill: [0, 0, 0, 0.12] } }),
+          Frame({ height: 56 }),
+          Frame({ height: 1, fill: [0, 0, 0, 0.12] }),
           MenuItem({ route: `/dashboard`, label: `Главная страница`, Icon: fill => Vector({ fill, width: 20, d: `M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z` }) }),
           MenuItem({ route: `/dashboard/exchange`, label: `Биржа товаров`, Icon: fill => Vector({ fill, width: 20, width: 20, d: `M5.2496 8.0688l2.83-2.8268 14.134 14.15-2.83 2.8268zM9.4857 3.8272l2.828-2.8288 5.6576 5.656-2.828 2.8288zM.9989 12.3147l2.8284-2.8284L9.484 15.143l-2.8284 2.8284zM1 21h12v2H1z` }) }),
           MenuItem({ route: `/dashboard/inventory`, label: `Инвентарь`, Icon: fill => Vector({ fill, width: 20, width: 20, d: `M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5v-3h3.56c.69 1.19 1.97 2 3.45 2s2.75-.81 3.45-2H19v3zm0-5h-4.99c0 1.1-.9 2-2 2s-2-.9-2-2H5V5h14v9z` }) }),
@@ -109,18 +109,18 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
   const active = AppState.route === route;
   return Hover({
     children: (isHover) => Frame({
-      rect: { height: 50 },
-      visual: { fill: isHover ? [0, 0, 0, 0.08] : [0, 0, 0, 0] },
+      height: 50,
+      fill: isHover ? [0, 0, 0, 0.08] : [0, 0, 0, 0],
       row: true,
       onClick: eventHandler(() => { AppState.route = route }),
       children: [
-        Frame({ rect: { width: 5 }, visual: { fill: active ? [0, 123, 255, 1] : [0, 0, 0, 0] } }),
+        Frame({ width: 5, fill: active ? [0, 123, 255, 1] : [0, 0, 0, 0] }),
         Frame({
-          rect: { x: [13], y: [`auto`, `auto`] },
+          x: [13], y: [`auto`, `auto`],
           children: Icon(active ? [0, 123, 255, 1] : [189, 194, 209, 1])
         }),
         Text({
-          rect: { x: [18], y: [`auto`, `auto`] },
+          x: [18], y: [`auto`, `auto`],
           value: label,
           size: 13,
           lineHeight: 15,
@@ -134,19 +134,19 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
 
 const Card = () => {
   return Frame({
-    rect: { grow: 1, height: 148, width: [402, `max-content`] },
+    grow: 1, height: 148, width: [402, `max-content`],
     padding: [12, 12],
     children: Frame({
-      visual: { fill: [255, 255, 255, 1], radius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]] },
+      fill: [255, 255, 255, 1], radius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
       padding: [24, 24],
       row: true,
       children: [
         Frame({
-          rect: { width: 88, height: 88, x: [0, 16] },
-          visual: { shadow: [[3, 0, [32, 168, 216, 1], 0, 0, true]], radius: 44 },
+          width: 88, height: 88, x: [0, 16],
+          shadow: [[3, 0, [32, 168, 216, 1], 0, 0, true]], radius: 44,
           children: [
             Text({
-              rect: { x: [`auto`, `auto`], y: [`auto`, `auto`] },
+              x: [`auto`, `auto`], y: [`auto`, `auto`],
               value: `7`,
               size: 40,
               lineHeight: 47,
@@ -156,7 +156,7 @@ const Card = () => {
           ]
         }),
         Text({
-          rect: { y: [`auto`, `auto`] },
+          y: [`auto`, `auto`],
           value: `Товаров в инвентаре`,
           size: 16,
           lineHeight: 19,

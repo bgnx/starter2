@@ -12,17 +12,17 @@ export const AuthPage = component(() => {
     AppState.route = `/dashboard`
   });
   return Frame({
-    rect: { grow: 1 },
+    grow: 1,
     padding: [10, 10],
     row: true,
     children: Frame({
-      rect: { grow: 1, width: [325, 0], height: 321, x: [`auto`, `auto`], y: [`auto`, `auto`] },
+      grow: 1, width: [325, 0], height: 321, x: [`auto`, `auto`], y: [`auto`, `auto`],
       children: [
         Frame({
           row: true,
           children: [
             Text({
-              rect: { y: [`auto`, `auto`] },
+              y: [`auto`, `auto`],
               size: 32,
               lineHeight: 48,
               weight: 600,
@@ -31,7 +31,7 @@ export const AuthPage = component(() => {
               value: signup ? `Register` : `Sign in`,
             }),
             Text({
-              rect: { x: [`auto`], y: [`auto`, `auto`] },
+              x: [`auto`], y: [`auto`, `auto`],
               size: 16,
               lineHeight: 24,
               weight: 400,
@@ -43,14 +43,14 @@ export const AuthPage = component(() => {
           ]
         }),
         Frame({
-          rect: { height: 1, y: [8, 16] },
-          visual: { fill: [0, 0, 0, 0.12] }
+          height: 1, y: [8, 16],
+          fill: [0, 0, 0, 0.12]
         }),
         Frame({
-          rect: { y: [0, 8] },
+          y: [0, 8],
           children: [
             Text({
-              rect: { y: [0, 12] },
+              y: [0, 12],
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -60,8 +60,8 @@ export const AuthPage = component(() => {
             }),
             Focus({
               children: isFocus => Text({
-                rect: { y: [0, 12] },
-                visual: { shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4, },
+                y: [0, 12],
+                shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4,
                 padding: [7, 7, 8, 8],
                 size: 16,
                 lineHeight: 19,
@@ -77,14 +77,14 @@ export const AuthPage = component(() => {
           ]
         }),
         Frame({
-          rect: { y: [0, 8] },
+          y: [0, 8],
           row: true,
           children: [
             Frame({
-              rect: { grow: 1, x: [4] },
+              grow: 1, x: [4],
               children: [
                 Text({
-                  rect: { y: [0, 12] },
+                  y: [0, 12],
                   size: 16,
                   lineHeight: 20,
                   weight: 600,
@@ -94,8 +94,8 @@ export const AuthPage = component(() => {
                 }),
                 Focus({
                   children: isFocus => Text({
-                    rect: { y: [0, 12] },
-                    visual: { shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4, },
+                    y: [0, 12],
+                    shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4,
                     padding: [7, 7, 8, 8],
                     size: 16,
                     lineHeight: 19,
@@ -111,10 +111,10 @@ export const AuthPage = component(() => {
               ]
             }),
             signup && Frame({
-              rect: { grow: 1, x: [4] },
+              grow: 1, x: [4],
               children: [
                 Text({
-                  rect: { y: [0, 12] },
+                  y: [0, 12],
                   size: 16,
                   lineHeight: 20,
                   weight: 600,
@@ -124,8 +124,8 @@ export const AuthPage = component(() => {
                 }),
                 Focus({
                   children: isFocus => Text({
-                    rect: { y: [0, 12] },
-                    visual: { shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4, },
+                    y: [0, 12],
+                    shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4,
                     padding: [7, 7, 8, 8],
                     size: 16,
                     lineHeight: 19,
@@ -144,11 +144,11 @@ export const AuthPage = component(() => {
         }),
         signup ? Frame({
           row: true,
-          rect: { y: [0, 20] },
+          y: [0, 20],
           children: [
-            Checkbox({ rect: { x: [0, 10], y: [`auto`, `auto`] }, checked: agreeWithTerms, onToggle: () => agreeWithTermsSet(!agreeWithTerms) }),
+            Checkbox({ x: [0, 10], y: [`auto`, `auto`], checked: agreeWithTerms, onToggle: () => agreeWithTermsSet(!agreeWithTerms) }),
             Text({
-              rect: { x: [0, 10], y: [`auto`, `auto`] },
+              x: [0, 10], y: [`auto`, `auto`],
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -157,7 +157,7 @@ export const AuthPage = component(() => {
               value: `Agree with`
             }),
             Text({
-              rect: { y: [`auto`, `auto`] },
+              y: [`auto`, `auto`],
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -168,11 +168,11 @@ export const AuthPage = component(() => {
           ]
         }) : Frame({
           row: true,
-          rect: { y: [0, 20] },
+          y: [0, 20],
           children: [
-            Checkbox({ rect: { x: [0, 10], y: [`auto`, `auto`] }, checked: rememberMe, onToggle: () => rememberMeSet(!rememberMe) }),
+            Checkbox({ x: [0, 10], y: [`auto`, `auto`], checked: rememberMe, onToggle: () => rememberMeSet(!rememberMe) }),
             Text({
-              rect: { x: [0, 10], y: [`auto`, `auto`] },
+              x: [0, 10], y: [`auto`, `auto`],
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -181,14 +181,14 @@ export const AuthPage = component(() => {
               value: `Remember me`,
             }),
             Text({
-              rect: { x: [`auto`], y: [`auto`, `auto`] },
+              x: [`auto`], y: [`auto`, `auto`],
               value: `Forgot password`
             }),
           ]
         }),
         Text({
-          visual: { fill: [0, 123, 255, 1], radius: 4 },
-          rect: { stretch: false },
+          fill: [0, 123, 255, 1], radius: 4,
+          stretch: false,
           padding: [6, 32],
           value: signup ? `Register` : `Login`,
           size: 14,

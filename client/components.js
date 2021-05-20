@@ -2,25 +2,21 @@ import { component } from "./AppState.js";
 
 export const Frame = ({
   float = 0,
-  visual: {
-    fill = [0, 0, 0, 0],
-    radius = 0,
-    shadow = []
-  } = {},
+  fill = [0, 0, 0, 0],
+  radius = 0,
+  shadow = [],
   onClick = null,
   children,
   padding = [0, 0, 0, 0],
   justifyContent = `flex-start`, alignItems = `flex-start`, alignContent = `stretch`,
   overflow = `visible`,
   row = false, wrap = false,
-  rect: {
-    width = [null, 0],
-    height = [null, 0],
-    grow = 0,
-    stretch = true,
-    x: [offsetLeft = 0, offsetRight = float ? `auto` : 0] = [],
-    y: [offsetTop = 0, offsetBottom = float ? `auto` : 0] = [],
-  } = {},
+  width = [null, 0],
+  height = [null, 0],
+  grow = 0,
+  stretch = true,
+  x: [offsetLeft = 0, offsetRight = float ? `auto` : 0] = [],
+  y: [offsetTop = 0, offsetBottom = float ? `auto` : 0] = [],
   attrs,
 }) => {
   const [maxWidth, minWidth] = typeof width === `number` ? [width, width] : width;
@@ -165,8 +161,8 @@ export const Checkbox = ({ size = 18, checked, onToggle, ...props }) => {
   return Frame({
     ...props,
     children: Frame({
-      rect: { width: size, height: size },
-      visual: { shadow: [[2, 0, [0, 123, 255, 1], 0, 0, true]], radius: 2 },
+      width: size, height: size,
+      shadow: [[2, 0, [0, 123, 255, 1], 0, 0, true]], radius: 2,
       onClick: onToggle,
       children: [
         checked && Vector({

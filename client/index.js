@@ -5,7 +5,7 @@ import { DashboardPage } from "./pages/DashboardPage.js";
 
 export const App = component(() => {
   return Frame({
-    rect: { width: AppState.windowWidth, height: AppState.windowHeight },
+    width: AppState.windowWidth, height: AppState.windowHeight,
     children: [
       AppState.route === `/auth` && AuthPage(),
       AppState.route.indexOf(`/dashboard`) === 0 && DashboardPage(),
