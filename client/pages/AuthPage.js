@@ -13,16 +13,16 @@ export const AuthPage = component(() => {
   });
   return Frame({
     grow: 1,
-    padding: [10, 10],
+    paddingLeft: 10, paddingRight: 10, paddingTop: 10, paddingBottom: 10,
     row: true,
     children: Frame({
-      grow: 1, width: [325, 0], height: 321, x: [`auto`, `auto`], y: [`auto`, `auto`],
+      grow: 1, width: [325, 0], height: 321, marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
       children: [
         Frame({
           row: true,
           children: [
             Text({
-              y: [`auto`, `auto`],
+              marginTop: `auto`, marginBottom: `auto`,
               size: 32,
               lineHeight: 48,
               weight: 600,
@@ -31,7 +31,7 @@ export const AuthPage = component(() => {
               value: signup ? `Register` : `Sign in`,
             }),
             Text({
-              x: [`auto`], y: [`auto`, `auto`],
+              marginLeft: `auto`, marginTop: `auto`, marginBottom: `auto`,
               size: 16,
               lineHeight: 24,
               weight: 400,
@@ -43,14 +43,14 @@ export const AuthPage = component(() => {
           ]
         }),
         Frame({
-          height: 1, y: [8, 16],
+          height: 1, marginTop: 8, marginBottom: 16,
           fill: [0, 0, 0, 0.12]
         }),
         Frame({
-          y: [0, 8],
+          marginBottom: 8,
           children: [
             Text({
-              y: [0, 12],
+              marginBottom: 12,
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -60,9 +60,9 @@ export const AuthPage = component(() => {
             }),
             Focus({
               children: isFocus => Text({
-                y: [0, 12],
+                marginBottom: 12,
                 shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4,
-                padding: [7, 7, 8, 8],
+                paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
                 size: 16,
                 lineHeight: 19,
                 weight: 400,
@@ -77,14 +77,14 @@ export const AuthPage = component(() => {
           ]
         }),
         Frame({
-          y: [0, 8],
+          marginBottom: 8,
           row: true,
           children: [
             Frame({
-              grow: 1, x: [4],
+              grow: 1, marginLeft: 4,
               children: [
                 Text({
-                  y: [0, 12],
+                  marginBottom: 12,
                   size: 16,
                   lineHeight: 20,
                   weight: 600,
@@ -94,9 +94,9 @@ export const AuthPage = component(() => {
                 }),
                 Focus({
                   children: isFocus => Text({
-                    y: [0, 12],
+                    marginBottom: 12,
                     shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4,
-                    padding: [7, 7, 8, 8],
+                    paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
                     size: 16,
                     lineHeight: 19,
                     weight: 400,
@@ -111,10 +111,10 @@ export const AuthPage = component(() => {
               ]
             }),
             signup && Frame({
-              grow: 1, x: [4],
+              grow: 1, marginLeft: 4,
               children: [
                 Text({
-                  y: [0, 12],
+                  marginBottom: 12,
                   size: 16,
                   lineHeight: 20,
                   weight: 600,
@@ -124,9 +124,9 @@ export const AuthPage = component(() => {
                 }),
                 Focus({
                   children: isFocus => Text({
-                    y: [0, 12],
+                    marginBottom: 12,
                     shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], radius: 4,
-                    padding: [7, 7, 8, 8],
+                    paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
                     size: 16,
                     lineHeight: 19,
                     weight: 400,
@@ -144,11 +144,11 @@ export const AuthPage = component(() => {
         }),
         signup ? Frame({
           row: true,
-          y: [0, 20],
+          marginBottom: 20,
           children: [
-            Checkbox({ x: [0, 10], y: [`auto`, `auto`], checked: agreeWithTerms, onToggle: () => agreeWithTermsSet(!agreeWithTerms) }),
+            Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: agreeWithTerms, onToggle: () => agreeWithTermsSet(!agreeWithTerms) }),
             Text({
-              x: [0, 10], y: [`auto`, `auto`],
+              marginRight: 10, marginTop: `auto`, marginBottom: `auto`,
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -157,7 +157,7 @@ export const AuthPage = component(() => {
               value: `Agree with`
             }),
             Text({
-              y: [`auto`, `auto`],
+              marginTop: `auto`, marginBottom: `auto`,
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -168,11 +168,11 @@ export const AuthPage = component(() => {
           ]
         }) : Frame({
           row: true,
-          y: [0, 20],
+          marginBottom: 20,
           children: [
-            Checkbox({ x: [0, 10], y: [`auto`, `auto`], checked: rememberMe, onToggle: () => rememberMeSet(!rememberMe) }),
+            Checkbox({ marginRight: 10, marginTop: `auto`, marginBottom: `auto`, checked: rememberMe, onToggle: () => rememberMeSet(!rememberMe) }),
             Text({
-              x: [0, 10], y: [`auto`, `auto`],
+              marginRight: 10, marginTop: `auto`, marginBottom: `auto`,
               size: 16,
               lineHeight: 20,
               weight: 600,
@@ -181,7 +181,7 @@ export const AuthPage = component(() => {
               value: `Remember me`,
             }),
             Text({
-              x: [`auto`], y: [`auto`, `auto`],
+              marginLeft: `auto`, marginTop: `auto`, marginBottom: `auto`,
               value: `Forgot password`
             }),
           ]
@@ -189,7 +189,7 @@ export const AuthPage = component(() => {
         Text({
           fill: [0, 123, 255, 1], radius: 4,
           stretch: false,
-          padding: [6, 32],
+          paddingLeft: 32, paddingRight: 32, paddingTop: 6, paddingBottom: 6,
           value: signup ? `Register` : `Login`,
           size: 14,
           lineHeight: 24.5,

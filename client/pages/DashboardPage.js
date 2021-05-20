@@ -15,14 +15,14 @@ export const DashboardPage = () => {
         children: [
           Frame({
             grow: 1,
-            padding: [88, 32],
+            paddingLeft: 32, paddingRight: 32, paddingTop: 88, paddingBottom: 32,
             overflow: `scroll`,
             children: [
               Frame({
-                y: [0, 40],
+                marginBottom: 40,
                 children: [
                   Text({
-                    y: [0, 32],
+                    marginBottom: 32,
                     value: `Мой счёт`,
                     size: 20,
                     lineHeight: 23,
@@ -30,7 +30,7 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1]
                   }),
                   Text({
-                    y: [0, 24],
+                    marginBottom: 24,
                     value: `$4 352`,
                     size: 72,
                     lineHeight: 84,
@@ -40,7 +40,7 @@ export const DashboardPage = () => {
                   Text({
                     fill: [0, 123, 255, 1], radius: 4,
                     stretch: false,
-                    padding: [6, 16],
+                    paddingLeft: 16, paddingRight: 16, paddingTop: 6, paddingBottom: 6,
                     value: `Вывод средств`,
                     size: 14,
                     lineHeight: 24.5,
@@ -51,10 +51,10 @@ export const DashboardPage = () => {
                 ]
               }),
               Frame({
-                y: [0, 40],
+                marginBottom: 40,
                 children: [
                   Text({
-                    y: [0, 32],
+                    marginBottom: 32,
                     value: `Инвентарь`,
                     size: 20,
                     lineHeight: 23,
@@ -62,7 +62,7 @@ export const DashboardPage = () => {
                     color: [61, 81, 112, 1],
                   }),
                   Frame({
-                    x: [-12, -12], y: [-12, -12],
+                    marginLeft: -12, marginRight: -12, marginTop: -12, marginBottom: -12,
                     row: true,
                     wrap: true,
                     children: [
@@ -76,15 +76,15 @@ export const DashboardPage = () => {
             ]
           }),
           Frame({
-            float: true,
-            height: 56, x: [0, 0],
+            position: `absolute`,
+            height: 56, left: 0, right: 0,
             fill: [255, 255, 255, 1],
           }),
         ]
       }),
       Frame({
-        float: true,
-        width: 200, y: [0, 0],
+        position: `absolute`,
+        width: 200, top: 0, bottom: 0,
         fill: [255, 255, 255, 1], shadow: [[0, 2, [225, 229, 235, 0.8], 0, 1], [0, 27, [90, 97, 105, 0.15], 0, 13]],
         children: [
           Frame({ height: 56 }),
@@ -116,11 +116,11 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
       children: [
         Frame({ width: 5, fill: active ? [0, 123, 255, 1] : [0, 0, 0, 0] }),
         Frame({
-          x: [13], y: [`auto`, `auto`],
+          marginLeft: 13, marginTop: `auto`, marginBottom: `auto`,
           children: Icon(active ? [0, 123, 255, 1] : [189, 194, 209, 1])
         }),
         Text({
-          x: [18], y: [`auto`, `auto`],
+          marginLeft: 18, marginTop: `auto`, marginBottom: `auto`,
           value: label,
           size: 13,
           lineHeight: 15,
@@ -135,18 +135,18 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
 const Card = () => {
   return Frame({
     grow: 1, height: 148, width: [402, `max-content`],
-    padding: [12, 12],
+    paddingLeft: 12, paddingRight: 12, paddingTop: 12, paddingBottom: 12,
     children: Frame({
       fill: [255, 255, 255, 1], radius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
-      padding: [24, 24],
+      paddingLeft: 24, paddingRight: 24, paddingTop: 24, paddingBottom: 24,
       row: true,
       children: [
         Frame({
-          width: 88, height: 88, x: [0, 16],
+          width: 88, height: 88, marginRight: 16,
           shadow: [[3, 0, [32, 168, 216, 1], 0, 0, true]], radius: 44,
           children: [
             Text({
-              x: [`auto`, `auto`], y: [`auto`, `auto`],
+              marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
               value: `7`,
               size: 40,
               lineHeight: 47,
@@ -156,7 +156,7 @@ const Card = () => {
           ]
         }),
         Text({
-          y: [`auto`, `auto`],
+          marginTop: `auto`, marginBottom: `auto`,
           value: `Товаров в инвентаре`,
           size: 16,
           lineHeight: 19,
