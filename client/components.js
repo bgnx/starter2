@@ -34,9 +34,11 @@ export const Frame = ({
       justifyContent, alignItems, alignContent,
       overflow,
       display: `flex`,
-      flexFlow: `${flexDirection} ${flexWrap}`,
+      flexDirection, flexWrap,
+      flexGrow,
+      flexShrink: 0,
+      flexBasis: flexGrow > 0 ? `0` : `auto`,
 
-      flex: `${flexGrow} 0 ${flexGrow > 0 ? `0` : `auto`}`,
       alignSelf,
       maxWidth: maxWidth === null ? `none` : (typeof maxWidth === `number` ? `${maxWidth}px` : maxWidth),
       maxHeight: maxHeight === null ? `none` : (typeof maxHeight === `number` ? `${maxHeight}px` : maxHeight),
