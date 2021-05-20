@@ -134,7 +134,7 @@ const MenuItem = ({ route = ``, label = ``, Icon = (fill) => null }) => {
 
 const Card = () => {
   return Frame({
-    flexGrow: 1, height: 148, width: [402, `max-content`],
+    flexGrow: 1, height: 148, maxWidth: 402, minWidth: `max-content`,
     paddingLeft: 12, paddingRight: 12, paddingTop: 12, paddingBottom: 12,
     children: Frame({
       backgroundColor: [255, 255, 255, 1], borderRadius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],

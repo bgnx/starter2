@@ -12,15 +12,13 @@ export const Frame = ({
   justifyContent = `flex-start`, alignItems = `flex-start`, alignContent = `stretch`,
   overflow = `visible`,
   flexDirection = `column`, flexWrap = `nowrap`,
-  width = [null, 0],
-  height = [null, 0],
+  width = `auto`, minWidth = 0, maxWidth = `none`,
+  height = `auto`, minHeight = 0, maxHeight = `none`,
   flexGrow = 0,
   alignSelf = `stretch`,
   marginLeft = 0, marginTop = 0, marginRight = 0, marginBottom = 0,
   attrs,
 }) => {
-  const [maxWidth, minWidth] = typeof width === `number` ? [width, width] : width;
-  const [maxHeight, minHeight] = typeof height === `number` ? [height, height] : height;
   return React.createElement(`div`, {
     style: {
       boxSizing: `border-box`,
@@ -40,10 +38,12 @@ export const Frame = ({
       flexBasis: flexGrow > 0 ? `0` : `auto`,
 
       alignSelf,
-      maxWidth: maxWidth === null ? `none` : (typeof maxWidth === `number` ? `${maxWidth}px` : maxWidth),
-      maxHeight: maxHeight === null ? `none` : (typeof maxHeight === `number` ? `${maxHeight}px` : maxHeight),
-      minWidth: (typeof minWidth === `number` ? `${minWidth}px` : minWidth),
-      minHeight: (typeof minHeight === `number` ? `${minHeight}px` : minHeight),
+      width,
+      height,
+      maxWidth,
+      maxHeight,
+      minWidth,
+      minHeight,
 
       marginLeft, marginTop, marginRight, marginBottom,
       left, top, right, bottom,

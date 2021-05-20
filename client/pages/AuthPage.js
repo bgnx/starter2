@@ -16,7 +16,7 @@ export const AuthPage = component(() => {
     paddingLeft: 10, paddingRight: 10, paddingTop: 10, paddingBottom: 10,
     flexDirection: `row`,
     children: Frame({
-      flexGrow: 1, width: [325, 0], height: 321, marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
+      flexGrow: 1, maxWidth: 325, height: 321, marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,
       children: [
         Frame({
           flexDirection: `row`,
