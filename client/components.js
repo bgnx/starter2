@@ -5,7 +5,7 @@ export const Frame = ({
   left = 0, top = 0, right = `auto`, bottom = `auto`,
   backgroundColor = [0, 0, 0, 0],
   borderRadius = 0,
-  shadow = [],
+  boxShadow,
   onClick = null,
   children,
   paddingLeft = 0, paddingRight = 0, paddingTop = 0, paddingBottom = 0,
@@ -27,7 +27,7 @@ export const Frame = ({
       zIndex,
       backgroundColor,
       borderRadius,
-      boxShadow: shadow.map(([shadowSpread = 0, shadowBlur = 0, shadowColor = [0, 0, 0, 0], shadowX = 0, shadowY = 0, shadowInner = false]) => `rgba(${shadowColor[0]}, ${shadowColor[1]}, ${shadowColor[2]}, ${shadowColor[3]}) ${shadowX}px ${shadowY}px ${shadowBlur}px ${shadowSpread}px ${shadowInner ? `inset` : ``}`).join(`, `),
+      boxShadow,
       paddingLeft, paddingRight, paddingTop, paddingBottom,
       justifyContent, alignItems, alignContent,
       overflow,
@@ -158,7 +158,7 @@ export const Checkbox = ({ size = 18, checked, onToggle, ...props }) => {
     ...props,
     children: Frame({
       width: size, height: size,
-      shadow: [[2, 0, [0, 123, 255, 1], 0, 0, true]], borderRadius: 2,
+      boxShadow: `inset 0px 0px 0px 2px rgba(0, 123, 255, 1)`, borderRadius: 2,
       onClick: onToggle,
       children: [
         checked && Vector({

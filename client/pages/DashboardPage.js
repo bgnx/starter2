@@ -85,7 +85,7 @@ export const DashboardPage = () => {
       Frame({
         position: `absolute`,
         width: 200, top: 0, bottom: 0,
-        backgroundColor: `rgba(255, 255, 255, 1)`, shadow: [[0, 2, [225, 229, 235, 0.8], 0, 1], [0, 27, [90, 97, 105, 0.15], 0, 13]],
+        backgroundColor: `rgba(255, 255, 255, 1)`, boxShadow: `0px 1px 2px 0px rgba(225, 229, 235, 0.8), 0px 13px 27px 0px rgba(90, 97, 105, 0.15)`,
         children: [
           Frame({ height: 56 }),
           Frame({ height: 1, backgroundColor: `rgba(0, 0, 0, 0.12)` }),
@@ -137,13 +137,13 @@ const Card = () => {
     flexGrow: 1, height: 148, maxWidth: 402, minWidth: `max-content`,
     paddingLeft: 12, paddingRight: 12, paddingTop: 12, paddingBottom: 12,
     children: Frame({
-      backgroundColor: `rgba(255, 255, 255, 1)`, borderRadius: 4, shadow: [[0, 19, [90, 97, 105, 0.12], 0, 5]],
+      backgroundColor: `rgba(255, 255, 255, 1)`, borderRadius: 4, boxShadow: `0px 5px 19px 0px rgba(90, 97, 105, 0.12)`,
       paddingLeft: 24, paddingRight: 24, paddingTop: 24, paddingBottom: 24,
       flexDirection: `row`,
       children: [
         Frame({
           width: 88, height: 88, marginRight: 16,
-          shadow: [[3, 0, [32, 168, 216, 1], 0, 0, true]], borderRadius: 44,
+          boxShadow: `inset 0px 0px 0px 3px rgba(32, 168, 216, 1)`, borderRadius: 44,
           children: [
             Text({
               marginLeft: `auto`, marginRight: `auto`, marginTop: `auto`, marginBottom: `auto`,

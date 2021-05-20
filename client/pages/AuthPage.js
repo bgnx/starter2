@@ -61,7 +61,7 @@ export const AuthPage = component(() => {
             Focus({
               children: isFocus => Text({
                 marginBottom: 12,
-                shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], borderRadius: 4,
+                boxShadow: `0px 0px 0px 1px ${isFocus ? `rgba(0, 123, 255, 1)` : `rgba(217, 222, 229, 1)`}`, borderRadius: 4,
                 paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
                 size: 16,
                 lineHeight: 19,
@@ -95,7 +95,7 @@ export const AuthPage = component(() => {
                 Focus({
                   children: isFocus => Text({
                     marginBottom: 12,
-                    shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], borderRadius: 4,
+                    boxShadow: `0px 0px 0px 1px ${isFocus ? `rgba(0, 123, 255, 1)` : `rgba(217, 222, 229, 1)`}`, borderRadius: 4,
                     paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
                     size: 16,
                     lineHeight: 19,
@@ -125,7 +125,7 @@ export const AuthPage = component(() => {
                 Focus({
                   children: isFocus => Text({
                     marginBottom: 12,
-                    shadow: [[1, 0, isFocus ? [0, 123, 255, 1] : [217, 222, 229, 1]]], borderRadius: 4,
+                    boxShadow: `0px 0px 0px 1px ${isFocus ? `rgba(0, 123, 255, 1)` : `rgba(217, 222, 229, 1)`}`, borderRadius: 4,
                     paddingLeft: 8, paddingRight: 8, paddingTop: 7, paddingBottom: 7,
                     size: 16,
                     lineHeight: 19,
